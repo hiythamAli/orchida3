@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أوركيدة — لوحة الموظف</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>لوحة الموظف</h1>
+  
+  <div class="employee-buttons">
+    <button class="btn" onclick="window.location.href='index.html'">العودة للصفحة الرئيسية</button>
+
+    <button class="btn primary" id="showSeatsBtn">المقاعد</button>
+    <button class="btn primary" id="showCoursesBtn">الدورات</button>
+  </div>
+</header>
+
+<main class="employee-dashboard">
+
+  <!-- قسم المقاعد -->
+  <div id="seatsSection" class="section">
+    <h2>المقاعد المحجوزة</h2>
+    <input type="text" id="searchSeat" placeholder="بحث بالاسم أو الهاتف...">
+    <div id="seatsGrid" class="grid"></div>
+  </div>
+
+  <!-- قسم الدورات -->
+  <div id="coursesSection" class="section hidden">
+    <h2>الدورات التدريبية</h2>
+    <input type="text" id="searchCourse" placeholder="بحث بالاسم أو الهاتف...">
+    <div id="coursesGrid" class="grid"></div>
+  </div>
+
+</main>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<!-- تهيئة Firebase مركزية -->
+<script src="firebase-init.js"></script>
+
+<script src="employee-dashboard.js"></script>
+</body>
+</html>

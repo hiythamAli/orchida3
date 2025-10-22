@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أوركيدة — حجز المقاعد</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>📍 حجز المقاعد</h1>
+  <button class="btn" onclick="window.location.href='index.html'">العودة للصفحة الرئيسية</button>
+</header>
+
+<main class="dashboard">
+  <div class="seats-grid" id="seatsGrid"></div>
+</main>
+
+<!-- مودال الحجز -->
+<div id="modalOverlay" class="modal-overlay hidden">
+  <div class="modal glass">
+    <button class="close" id="modalClose">✕</button>
+    <h2>حجز المقعد</h2>
+
+    <div class="form-row">
+      <label>الاسم الكامل</label>
+      <input type="text" id="inputName" placeholder="اسمك">
+    </div>
+
+    <div class="form-row">
+      <label>رقم الهاتف</label>
+      <input type="tel" id="inputPhone" placeholder="059X-XXXXXX">
+    </div>
+
+    <div class="form-row">
+      <label>البريد الإلكتروني</label>
+      <input type="email" id="inputEmail" placeholder="name@example.com">
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn primary" id="confirmBooking">تأكيد الحجز</button>
+      <button class="btn ghost" id="cancelBooking">إلغاء</button>
+    </div>
+  </div>
+</div>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<!-- تهيئة Firebase مركزية -->
+<script src="firebase-init.js"></script>
+
+<script src="seats.js"></script>
+</body>
+</html>
